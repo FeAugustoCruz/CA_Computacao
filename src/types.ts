@@ -38,3 +38,20 @@ export interface Complementar {
   /** CH total conforme o relatório. null quando o campo está em branco. */
   ch: number | null
 }
+
+export interface Disciplina {
+  code: string
+  name: string
+  credits: number
+  /** OB = obrigatória, OP = optativa */
+  kind: 'OB' | 'OP'
+  /** Período sugerido. null nas optativas. */
+  period: number | null
+  /** Códigos das disciplinas exigidas, como listadas no currículo. */
+  prereqs: string[]
+  /** Exige ter vencido este período (estágio). */
+  minPeriod?: number
+  /** Exige este mínimo de créditos (TCC I). */
+  minCredits?: number
+  special?: 'Estágio' | 'TCC'
+}

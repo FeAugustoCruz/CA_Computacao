@@ -1,7 +1,7 @@
 import json, sys
 from playwright.sync_api import sync_playwright
 URL='file:///home/claude/ca-computacao/dist/index.html'
-pages=['inicio','sobre','integrantes','documentos','complementares','contato']
+pages=['inicio','sobre','integrantes','grade','documentos','complementares','contato']
 JS_TAP='''() => {
   const out=[];
   const sel='a[href],button,input,select,textarea,summary,[role=button]';

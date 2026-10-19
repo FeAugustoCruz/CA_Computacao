@@ -16,6 +16,8 @@ const paths = {
   file: <><path d="M6 3.5h8l4 4v13H6v-17Z" /><path d="M14 3.5v4h4M9 12h6m-6 3.5h6" /></>,
   mail: <><rect x="3" y="5.5" width="18" height="13" rx="1.5" /><path d="m3.5 7 8.5 6.5L20.5 7" /></>,
   user: <><circle cx="12" cy="8.5" r="3.8" /><path d="M4.5 20c.8-4 3.8-6 7.5-6s6.7 2 7.5 6" /></>,
+  info: <><circle cx="12" cy="12" r="8.5" /><path d="M12 11v5.2m0-8.4v.1" /></>,
+  grid: <><rect x="3.5" y="3.5" width="7" height="7" rx="1" /><rect x="13.5" y="3.5" width="7" height="7" rx="1" /><rect x="3.5" y="13.5" width="7" height="7" rx="1" /><rect x="13.5" y="13.5" width="7" height="7" rx="1" /></>,
   hours: <><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3.5 2M12 3.5V5" /></>,
 } as const
 

@@ -20,11 +20,16 @@ Tudo fica em `src/content/`. Enquanto a lista de integrantes estiver vazia, o si
 | `about.ts` | textos da página Sobre (história, missão etc.) |
 | `members.ts` | integrantes da gestão |
 | `documents.ts` | documentos (sem modelos de propósito: só entra arquivo real) |
+| `curriculo.ts` | disciplinas da Grade curricular (107: 47 obrigatórias e 60 optativas), geradas do PDF do currículo da UFES por `scripts/gen-curriculo.py` |
 | `complementares.ts` | atividades complementares, transcritas do PDF da UFES (04/03/2020) |
 
 ## Páginas
 
-Início, Sobre, Integrantes, Documentos, Complementares e Contato. As páginas de Notícias, Eventos e Projetos foram removidas.
+Início, Sobre, Integrantes, Grade curricular, Documentos, Complementares e Contato. As páginas de Notícias, Eventos e Projetos foram removidas.
+
+## Grade curricular
+
+As marcações de disciplinas concluídas ficam no `localStorage` do navegador (chave `ca-grade-concluidas-v1`): não há conta nem servidor, então cada pessoa vê só o próprio progresso e ele não passa de um aparelho para outro. A porcentagem considera as 47 obrigatórias (inclui Estágio e TCC I e II). Optativas são contadas à parte porque o PDF não informa quantas são exigidas. Para atualizar a matriz: `python3 scripts/gen-curriculo.py novo-curriculo.pdf`.
 
 ## Pendências conhecidas
 

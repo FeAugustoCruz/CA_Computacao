@@ -174,3 +174,12 @@ a, button, input, select, summary, label { touch-action: manipulation; }
   text-underline-offset: 4px;
 }
 .link-inline:hover { text-decoration-color: currentColor; }
+
+/* Painel de progresso da Grade: acompanha a rolagem só quando há espaço (largura e altura) */
+@media (min-width: 768px) and (min-height: 640px) {
+  .sticky-progress {
+    position: sticky;
+    top: calc(4rem + env(safe-area-inset-top, 0px) + 0.75rem);
+    z-index: 40;
+  }
+}

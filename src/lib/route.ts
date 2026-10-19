@@ -1,11 +1,11 @@
 import { useEffect, useSyncExternalStore } from 'react'
 
 export type PageName =
-  | 'inicio' | 'sobre' | 'integrantes' | 'documentos' | 'complementares' | 'contato' | 'nao-encontrada'
+  | 'inicio' | 'sobre' | 'integrantes' | 'grade' | 'documentos' | 'complementares' | 'contato' | 'nao-encontrada'
 
 export interface Route { page: PageName }
 
-const SIMPLE: PageName[] = ['inicio', 'sobre', 'integrantes', 'documentos', 'complementares', 'contato']
+const SIMPLE: PageName[] = ['inicio', 'sobre', 'integrantes', 'grade', 'documentos', 'complementares', 'contato']
 
 /** Rotas por hash simples (#sobre, #contato): funcionam em qualquer hospedagem estática. */
 export function parseHash(hash: string): Route {

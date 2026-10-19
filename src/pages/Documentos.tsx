@@ -3,11 +3,11 @@ import { DocRow } from '../components/cards'
 import { Icon } from '../components/Icon'
 import { Chips, EmptyState, PageHeader } from '../components/ui'
 import { docCategories } from '../content/documents'
+import { norm } from '../lib/text'
 import { getDocuments } from '../services/content'
 import type { DocCategory } from '../types'
 
 type Filter = 'todos' | DocCategory
-const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
 export function Documentos() {
   const docs = getDocuments()

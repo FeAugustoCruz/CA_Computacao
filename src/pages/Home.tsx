@@ -33,6 +33,7 @@ function Hero() {
 
 const quick: { href: string; title: string; text: string; icon: IconName }[] = [
   { href: '#integrantes', title: 'Integrantes', text: 'Quem faz parte da gestão', icon: 'user' },
+  { href: '#grade', title: 'Grade curricular', text: 'Marque as disciplinas e veja seu progresso', icon: 'grid' },
   { href: '#documentos', title: 'Documentos', text: 'Estatuto, atas, editais e relatórios', icon: 'file' },
   { href: '#complementares', title: 'Atividades complementares', text: `${complementares.length} atividades da lista da UFES`, icon: 'hours' },
   { href: '#contato', title: 'Contato', text: 'Dúvidas, sugestões e solicitações', icon: 'mail' },
@@ -48,7 +49,7 @@ export function Home() {
 
       <section aria-label="Acesso rápido" className="border-b border-line bg-sand">
         <div className="wrap py-[clamp(1.5rem,4vw,2.5rem)]">
-          <ul className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,15rem),1fr))] gap-3">
+          <ul className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,13rem),1fr))] gap-3">
             {quick.map((q) => (
               <li key={q.href}>
                 <a href={q.href} className="flex h-full items-start gap-4 rounded-lg border border-line bg-surface p-4 transition-[border-color,transform] duration-200 hover:border-ink motion-safe:hover:-translate-y-0.5">

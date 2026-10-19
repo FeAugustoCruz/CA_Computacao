@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react'
 import { Icon } from '../components/Icon'
 import { PageHeader } from '../components/ui'
+import { norm } from '../lib/text'
 import { MAX_CH, complementares, complementaresSource } from '../content/complementares'
 import type { Complementar } from '../types'
 
 type Sort = 'relatorio' | 'codigo' | 'ch-desc' | 'ch-asc'
-const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 const typeLabel = (a: Pick<Complementar, 'type' | 'typeTruncated'>) => (a.typeTruncated ? `${a.type}…` : a.type)
 
 const types = Array.from(new Map(complementares.map((a) => [a.type, a])).values()).sort((a, b) => a.type.localeCompare(b.type, 'pt-BR'))
