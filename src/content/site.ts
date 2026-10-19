@@ -8,11 +8,11 @@ export const site = {
   institution: 'Universidade Federal do Espírito Santo',
   institutionShort: 'UFES',
   campus: 'Campus Alegre',
-  email: null as string | null,
-  instagram: null as string | null,
+  email: 'caccomp.ufes@gmail.com',
+  instagram: '@cacc.ufes',
   otherSocial: null as { label: string; href: string }[] | null,
-  location: null as string | null,
-  openingHours: null as string | null,
+  location: 'UFES - Campus Alegre',
+  openingHours: '08h - 18h',
 }
 
 export const placeholders = {
