@@ -3,7 +3,7 @@ import { nav } from '../content/site'
 import type { Route } from '../lib/route'
 import { useTheme } from '../lib/useTheme'
 import { Icon } from './Icon'
-import { Monogram, Wordmark } from './Logo'
+import { LogoMark, Wordmark } from './Logo'
 
 export function Header({ route }: { route: Route }) {
   const [open, setOpen] = useState(false)
@@ -38,7 +38,7 @@ export function Header({ route }: { route: Route }) {
     <header ref={headerRef} className="on-dark sticky top-[env(safe-area-inset-top,0px)] z-50 border-b border-graphite bg-night text-white">
       <div className="wrap flex h-16 items-center justify-between gap-4">
         <a href="#inicio" className="flex min-h-[44px] min-w-0 items-center gap-3">
-          <Monogram className="h-9 w-9 text-lg" />
+          <LogoMark className="h-11 w-auto" />
           <Wordmark />
         </a>
 
