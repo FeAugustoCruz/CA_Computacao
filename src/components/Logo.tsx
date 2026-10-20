@@ -1,4 +1,21 @@
-/** Marca provisória: monograma "CA". Troque por <img> com o logotipo oficial quando ele estiver disponível. */
+import logoSrc from '../assets/logo-ca.png'
+
+/** Logotipo oficial (emblema da coruja), estático. Arquivo recortado na área útil, 192×176, para manter a proporção. */
+export function LogoMark({ className = '' }: { className?: string }) {
+  return (
+    <img
+      src={logoSrc}
+      width={192}
+      height={176}
+      alt=""
+      decoding="async"
+      draggable={false}
+      className={`shrink-0 select-none object-contain ${className}`}
+    />
+  )
+}
+
+/** Marca provisória: monograma "CA". Ainda usada no rodapé. */
 export function Monogram({ className = '' }: { className?: string }) {
   return (
     <span
