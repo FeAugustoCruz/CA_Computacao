@@ -33,7 +33,7 @@ As marcações de disciplinas concluídas ficam no `localStorage` do navegador (
 
 ## Pendências conhecidas
 
-- **Logotipo:** o monograma "CA" em `src/components/Logo.tsx` é provisório. Troque por uma `<img>` com o logotipo oficial.
+- **Logotipo:** o emblema oficial fica em `src/assets/logo-ca.png` e é usado no cabeçalho e no rodapé (`LogoMark` em `src/components/Logo.tsx`). O ícone da aba (favicon) é uma versão 64×64 da mesma imagem, embutida em `index.html`. Para trocar a logo, substitua o PNG e gere o favicon de novo.
 - **Formulário de contato:** valida os campos, mas só envia de verdade se existir um endpoint. Defina `VITE_CONTACT_ENDPOINT` (ex.: Formspree) no build. Sem isso, a página avisa que nada foi enviado e oferece copiar a mensagem.
 - **CMS / área administrativa:** não existe. `src/services/content.ts` é o ponto de troca: substitua pelas chamadas ao CMS ou banco escolhido (Supabase, Sanity, Strapi...). Edição online precisa da autenticação e das permissões desse serviço.
 - **Atividades complementares:** o relatório é de 2020 e corta alguns enunciados no fim da linha (marcados com "…"). Confirme texto e valores com o Colegiado.

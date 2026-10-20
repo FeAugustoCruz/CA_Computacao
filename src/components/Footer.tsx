@@ -1,5 +1,5 @@
 import { nav, placeholders, site } from '../content/site'
-import { Monogram, Wordmark } from './Logo'
+import { LogoMark, Wordmark } from './Logo'
 import { Placeholder } from './ui'
 
 export function Footer() {
@@ -8,7 +8,7 @@ export function Footer() {
       <div className="wrap grid gap-10 py-[clamp(2.5rem,6vw,3.5rem)] md:grid-cols-[1.3fr_1fr_1fr]">
         <div className="min-w-0">
           <a href="#inicio" className="inline-flex min-h-[44px] items-center gap-3">
-            <Monogram className="h-10 w-10 text-xl" />
+            <LogoMark className="h-11 w-auto" />
             <Wordmark />
           </a>
           <p className="mt-5 max-w-[40ch] text-sm text-white/70">

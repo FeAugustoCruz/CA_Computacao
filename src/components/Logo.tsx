@@ -15,19 +15,6 @@ export function LogoMark({ className = '' }: { className?: string }) {
   )
 }
 
-/** Marca provisória: monograma "CA". Ainda usada no rodapé. */
-export function Monogram({ className = '' }: { className?: string }) {
-  return (
-    <span
-      aria-hidden="true"
-      className={`display grid shrink-0 place-items-center rounded-md bg-orange text-night ${className}`}
-      style={{ fontStretch: '100%' }}
-    >
-      CA
-    </span>
-  )
-}
-
 export function Wordmark({ className = '' }: { className?: string }) {
   return (
     <span className={`flex min-w-0 flex-col leading-none ${className}`}>
