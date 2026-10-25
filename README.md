@@ -39,7 +39,8 @@ A página **Horários** junta, numa só tela, as aulas de Ciência da Computaç�
 - **Quais disciplinas aparecem:** só as do currículo em `src/content/curriculo.ts` (107 disciplinas, gerado do PDF oficial). O código tem prioridade; aulas reconhecidas só pelo nome ficam marcadas como **a confirmar**.
 - **Atualização automática:** o workflow `.github/workflows/horarios.yml` roda todo dia às 06:00 (Brasília), grava o JSON na `main` se algo mudou e dispara o deploy. Também dá para rodá-lo à mão na aba Actions. Se uma coleta falhar, os últimos dados válidos continuam no ar e o site avisa.
 - **Não é tempo real:** a página informa a data da última coleta e avisa quando os dados estão antigos ou a atualização falhou.
-- Enquanto a primeira coleta não rodar, `horarios.json` está vazio e a página mostra um aviso com links para as páginas oficiais.
+- **Como as planilhas são lidas:** cada aba é uma sala, com uma linha por hora e os dias nas colunas. As aulas de Computação trazem o código e a turma, como `Programação II (COM10082 - CC1)`. O `CC1` é o que comprova que a aula é do curso, porque o código da disciplina é o mesmo em todos os cursos; aulas com turma de outro curso (SI1, AG1, BL1...) e código ou nome parecido ficam como **a confirmar**.
+- **Dados iniciais:** `src/data/horarios.json` foi gerado das planilhas do Prédio Central e do Ciclo Básico (2026/2). Os laboratórios Chi-Chiu e Reuni entram na primeira execução do workflow, pois ainda não tenho o link direto de suas planilhas.
 
 ## Pendências conhecidas
 

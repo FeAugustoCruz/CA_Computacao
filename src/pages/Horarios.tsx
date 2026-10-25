@@ -290,7 +290,7 @@ function ColunaDia({ aulas, esc, onAbrir, chaveDe }: { aulas: Aula[]; esc: Escal
             type="button"
             onClick={() => onAbrir(chaveDe(a))}
             title={`${a.name} · ${faixa(a)} · ${localLabel(a)}`}
-            className={`absolute overflow-hidden rounded-[5px] p-1.5 text-left text-[0.72rem] leading-tight shadow-sm outline-offset-2 transition-transform duration-100 hover:z-10 hover:scale-[1.02] active:scale-[0.98] ${corLocal(a.local.group)} ${a.status === 'revisar' ? 'ring-2 ring-inset ring-dashed ring-white/70' : ''}`}
+            className={`absolute overflow-hidden rounded-[5px] ${b.cols >= 3 ? 'p-1 text-[0.62rem]' : 'p-1.5 text-[0.72rem]'} text-left leading-tight shadow-sm outline-offset-2 transition-transform duration-100 hover:z-10 hover:scale-[1.02] active:scale-[0.98] ${corLocal(a.local.group)} ${a.status === 'revisar' ? 'ring-2 ring-inset ring-dashed ring-white/70' : ''}`}
             style={{ top: top + 1, height: h - 2, left: `calc(${(b.col / b.cols) * 100}% + 2px)`, width: `calc(${100 / b.cols}% - 4px)` }}
           >
             <span className="block font-bold [overflow-wrap:anywhere]">{a.name}</span>

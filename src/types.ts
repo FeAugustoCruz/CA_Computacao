@@ -82,7 +82,7 @@ export interface Aula {
   local: { group: string; room: string | null }
   /** curso = confirmada pelo código; revisar = identificada só pelo nome ou por código divergente. */
   status: 'curso' | 'revisar'
-  via: 'codigo' | 'nome'
+  via: 'codigo' | 'turma' | 'nome'
   source: { id: string; sheet: string; cell: string | null }
   extra: string[]
   issues: AulaAviso[]

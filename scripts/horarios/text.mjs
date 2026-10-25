@@ -149,6 +149,8 @@ export function extractCode(text) {
   return m ? { code: `${m[1]}${m[2]}`.toUpperCase(), index: m.index, length: m[0].length } : null
 }
 
+/** "CC1": sigla do curso (CC = Ciência da Computação) seguida do número da turma, como as planilhas da UFES Alegre indicam. */
+const TURMA_CC_RE = /(?<![A-Za-z0-9])CC\s?0*(\d{1,2})(?![A-Za-z0-9])/
 const TURMA_WORD_RE = /(?<![A-Za-z0-9])turma\s*[-:.]?\s*0*(\d{1,2}|[A-Za-z])(?![A-Za-z0-9])/i
 const TURMA_T_RE = /(?<![A-Za-z0-9])T\s?0*(\d{1,2})(?![A-Za-z0-9])/
 const TURMA_AFTER_CODE_RE = /^\s*[-–/.]\s*0*(\d{1,2})(?![0-9A-Za-z])/
@@ -156,7 +158,9 @@ const TURMA_AFTER_CODE_RE = /^\s*[-–/.]\s*0*(\d{1,2})(?![0-9A-Za-z])/
 /** Turma citada no texto ("Turma 01", "T02", "COM10129-01"); a posição do código ajuda no último formato. */
 export function extractTurma(text, codeInfo = null) {
   const s = String(text ?? '')
-  let m = TURMA_WORD_RE.exec(s)
+  let m = TURMA_CC_RE.exec(s)
+  if (m) return { turma: `CC${Number(m[1])}`, match: m[0] }
+  m = TURMA_WORD_RE.exec(s)
   if (m) return { turma: m[1].toUpperCase().padStart(/\d/.test(m[1]) ? 2 : 1, '0'), match: m[0] }
   m = TURMA_T_RE.exec(s)
   if (m) return { turma: m[1].padStart(2, '0'), match: m[0] }
@@ -200,10 +204,18 @@ export function parseCell(text) {
     return s.replace(/^[\s\-–/:|,.()]+|[\s\-–/:|,.()]+$/g, '').replace(/\s+/g, ' ').trim()
   }
   for (const l of lines) {
-    const s = strip(l)
+    let s = strip(l)
     if (!s) continue
+    // "Computação Forense prof. Paulo": o professor não faz parte do nome da disciplina.
+    let prof = null
+    const pm = /\s+(?:prof(?:essor)?a?\.?(?:ª)?|dra?\.)\s+\S.*$/i.exec(s)
+    if (pm && pm.index > 0) {
+      prof = pm[0].trim()
+      s = s.slice(0, pm.index).trim()
+    }
     if (!name && !PROF_RE.test(s) && !(extractTurma(l) && s.length <= 3)) name = s
     else extra.push(s)
+    if (prof) extra.push(prof)
   }
   if (!name && !codeInfo) return null
   return { code: codeInfo?.code ?? null, name, turma: turmaInfo?.turma ?? null, extra, raw }

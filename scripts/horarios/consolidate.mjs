@@ -6,11 +6,16 @@ const slug = (s) => norm(s ?? '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, 
 /**
  * Relaciona uma aula lida à grade curricular.
  * 1. Código oficial presente no currículo: confirmada.
- * 2. Sem código (ou código fora do currículo), mas nome igual ao de uma disciplina do currículo: "revisar".
- * 3. Caso contrário: outra disciplina do campus, descartada da exibição.
+ * 2. Sem código, mas com a turma do curso (CC1, CC2...) e nome igual ao de uma disciplina do currículo: confirmada pela turma.
+ * 3. Sem código (ou código fora do currículo), mas nome igual ao de uma disciplina do currículo: "revisar".
+ * 4. Turma do curso (CC...) mas disciplina fora do currículo: "revisar" (pode ser uma optativa nova).
+ * 5. Caso contrário: outra disciplina do campus, descartada da exibição.
  */
 export function classify(raw, curriculum) {
   const issues = []
+  // O código da disciplina é o mesmo em todos os cursos; quem indica o curso é a turma (CC1 = Computação, SI1, AG1, BL1...).
+  const outra = /(?<![A-Za-z0-9])((?!CC)[A-Z]{2}\s?\d{1,2})(?![A-Za-z0-9])/.exec([raw.name, ...(raw.extra ?? [])].join(' '))
+  const outroCurso = (tag) => ({ kind: 'outro-curso', text: `A planilha indica a turma ${tag.replace(/\s/g, '')}, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação.` })
   if (raw.code && curriculum.byCode.has(raw.code)) {
     const ref = curriculum.byCode.get(raw.code)
     const a = nameKey(raw.name)
@@ -18,11 +23,22 @@ export function classify(raw, curriculum) {
     if (!raw.name) issues.push({ kind: 'nome-ausente', text: 'A planilha não traz o nome da disciplina; foi usado o nome do currículo.' })
     else if (a !== b && !a.includes(b) && !b.includes(a)) issues.push({ kind: 'nome-diferente', text: `A planilha chama esta disciplina de "${raw.name}"; o currículo usa "${ref.name}".` })
     // O nome exibido é sempre o do currículo, para a mesma disciplina aparecer igual em todas as planilhas.
+    if (outra && !/^CC\d+$/.test(raw.turma ?? '')) return { status: 'revisar', via: 'codigo', ref: ref.code, name: ref.name, issues: [outroCurso(outra[1])] }
     return { status: 'curso', via: 'codigo', ref: ref.code, name: ref.name, issues }
   }
   const matches = raw.name ? (curriculum.byNameKey.get(nameKey(raw.name)) ?? []) : []
+  const turmaDoCurso = /^CC\d+$/.test(raw.turma ?? '')
+  if (matches.length === 1 && !raw.code && turmaDoCurso) {
+    return { status: 'curso', via: 'turma', ref: matches[0].code, name: matches[0].name, issues: [{ kind: 'sem-codigo-turma', text: `A planilha não traz o código; a disciplina foi identificada pelo nome e pela turma ${raw.turma}.` }] }
+  }
+  if (!matches.length && turmaDoCurso) {
+    return { status: 'revisar', via: 'turma', ref: null, name: raw.name || 'Disciplina sem nome', issues: [{ kind: 'fora-do-curriculo', text: `A planilha indica a turma ${raw.turma} (Ciência da Computação), mas esta disciplina não consta no currículo. Pode ser uma optativa nova; confirme com a coordenação.` }] }
+  }
   if (matches.length) {
     const ref = matches.length === 1 ? matches[0] : null
+    if (outra && !raw.code) {
+      issues.push(outroCurso(outra[1]))
+    } else
     issues.push(
       raw.code
         ? { kind: 'codigo-diferente', text: `O código ${raw.code} da planilha não consta no currículo; o nome coincide com ${ref ? `${ref.code} (${ref.name})` : 'mais de uma disciplina do currículo'}. Confirme com a coordenação.` }

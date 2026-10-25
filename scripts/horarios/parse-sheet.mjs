@@ -157,6 +157,13 @@ function blockTitle(grid, header, prevHeaderRow, minDayCol) {
       if (r === header.row && c >= minDayCol) continue
       const t = clean(cell.v).replace(/\n/g, ' ')
       if (!t || dayFromText(t) != null || timeLabel(t)) continue
+      // Rótulo seguido do valor na célula ao lado ("Sala:" | "Sala 04"): vale o valor. Outros rótulos ("Período:") não são sala.
+      if (/:\s*$/.test(t)) {
+        let value = /^(sala|local|ambiente|laborat[oó]rio)\s*:\s*$/i.test(t) ? clean(at(grid, r, c + 1)?.v ?? '').replace(/\n/g, ' ') : ''
+        if (/^\d{1,3}$/.test(value)) value = `Sala ${value.padStart(2, '0')}` // "Sala:" | 3  ->  "Sala 03"
+        if (value) candidates.push({ t: value, hint: true, r })
+        continue
+      }
       if (/^(hor[aá]rios?|hora|horas)$/i.test(t)) continue
       candidates.push({ t, hint: ROOM_HINT.test(norm(t)), r })
     }

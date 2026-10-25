@@ -282,3 +282,56 @@ test('atualização: usa o link direto do Google Sheets e volta à página ofici
   assert.equal(b.aulas.length, a.aulas.length)
   assert.ok(b.sources[0].warnings.some((w) => /link direto/.test(w)))
 })
+
+/** Aba no formato real das planilhas da UFES Alegre: uma sala por aba, "Sala:" com o valor ao lado, uma linha por hora. */
+const salaReal = (wb, nome, sala, linhas) => {
+  const ws = wb.addWorksheet(nome)
+  ws.getCell('A1').value = { formula: 'IMAGE("http://exemplo/logo.jpg",1)' }
+  ws.mergeCells('A1:D3')
+  ws.getCell('F1').value = 'Período:'
+  ws.getCell('G1').value = '2026/2'
+  ws.getCell('F2').value = 'Sala:'
+  ws.getCell('G2').value = sala
+  ws.getCell('F3').value = 'Capacidade:'
+  ws.getCell('G3').value = '40 alunos'
+  ;['HORÁRIO', 'SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO / DOMINGO'].forEach((v, i) => (ws.getCell(4, i + 1).value = v))
+  linhas.forEach(([hora, ...dias], i) => {
+    ws.getCell(5 + i, 1).value = hora
+    dias.forEach((v, j) => (ws.getCell(5 + i, 2 + j).value = v))
+  })
+}
+
+test('formato real da UFES: sala pelo rótulo, turma CC, outros cursos e disciplinas fora do currículo', async () => {
+  const buf = await makeXlsx((wb) => {
+    salaReal(wb, 'Sala 04', 'Sala 04', [
+      ['08:00 às 09:00', 'Cálculo A                          \n (MPA06839 - CC1)', 'Fisiologia Animal - ZT1', 'Computação Forense CC1 prof. Paulo', '', ''],
+      ['09:00 às 10:00', 'Cálculo A                          \n (MPA06839 - CC1)', 'Fisiologia Animal - ZT1', 'Computação Forense CC1 prof. Paulo', 'Optativa PLN - CC1 Juliana', ''],
+      ['10:00 às 11:00', '', '', '', 'Optativa PLN - CC1 Juliana', 'Banco de Dados\nSI1\nProf. Antônio'],
+    ])
+    salaReal(wb, 'Sala 03', 3, [['08:00 às 09:00', 'Programação II (COM10082 - CC1)', '', '', '', '']])
+  })
+  const sheets = await readWorkbook(buf, 'predio-central.xlsx')
+  const raw = sheets.flatMap((s) => parseSheet(s).aulas)
+  const { aulas, stats } = consolidate([{ sourceId: 'predio-central', group: 'Prédio Central', raw }], curriculum)
+  const por = (nome) => aulas.filter((a) => a.name === nome)
+
+  const calc = por('Cálculo A')
+  assert.equal(calc.length, 1, 'as duas horas seguidas viram uma aula')
+  assert.deepEqual([calc[0].day, calc[0].start, calc[0].end, calc[0].turma, calc[0].local.room, calc[0].status, calc[0].via], [1, '08:00', '10:00', 'CC1', 'Sala 04', 'curso', 'codigo'])
+  assert.equal(por('Programação II')[0].local.room, 'Sala 03', 'sala numérica vira "Sala 03"')
+
+  const forense = por('Computação Forense')[0]
+  assert.deepEqual([forense.status, forense.via, forense.ref, forense.name], ['curso', 'turma', 'COM10607', 'Computação Forense'], 'o professor não entra no nome')
+  assert.ok(forense.extra.some((e) => /Paulo/.test(e)))
+
+  const pln = aulas.find((a) => /PLN/.test(a.name))
+  assert.deepEqual([pln.status, pln.ref, pln.turma, pln.start, pln.end], ['revisar', null, 'CC1', '09:00', '11:00'])
+  assert.match(pln.issues[0].text, /não consta no currículo/)
+
+  const bd = por('Banco de Dados')[0]
+  assert.equal(bd.status, 'revisar')
+  assert.match(bd.issues[0].text, /SI1.*outro curso/)
+
+  assert.ok(!aulas.some((a) => /Fisiologia/.test(a.name)), 'turma ZT1 é de outro curso e não tem nome no currículo')
+  assert.equal(stats.get('predio-central').descartadas, 2, 'duas leituras de hora da aula de outro curso')
+})
