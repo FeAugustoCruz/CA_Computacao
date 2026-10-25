@@ -1,0 +1,1068 @@
+{
+ "schemaVersion": 1,
+ "course": "Ciência da Computação",
+ "generatedAt": "2026-10-25T17:20:07.738Z",
+ "lastAttempt": {
+  "at": "2026-10-25T17:20:07.738Z",
+  "ok": true,
+  "message": null
+ },
+ "sources": [
+  {
+   "id": "predio-central",
+   "label": "Prédio Central",
+   "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
+   "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQziQtbnCTvmYk2F9J9tw6W0qVvYceMi3IsE-pXRdF6Cc8oIyxsCW4SZbho_AJDj538tcqaG4s8XFEn/pubhtml",
+   "fileName": null,
+   "fetchedAt": "2026-10-25T17:20:07.738Z",
+   "fileLastModified": null,
+   "sheetUpdatedText": null,
+   "status": "ok",
+   "error": null,
+   "sheets": 7,
+   "lidas": 419,
+   "doCurso": 30,
+   "aRevisar": 5,
+   "descartadas": 347,
+   "warnings": []
+  },
+  {
+   "id": "ciclo-basico",
+   "label": "Ciclo Básico",
+   "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
+   "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSJWpCXgWLk-M_rTwUDKNjaky40wExieiDrBlMJoA_tU_XOGK-ngWWzJtBnkSCpwCFDY4Z46GwdqCum/pubhtml",
+   "fileName": null,
+   "fetchedAt": "2026-10-25T17:20:07.738Z",
+   "fileLastModified": null,
+   "sheetUpdatedText": null,
+   "status": "ok",
+   "error": null,
+   "sheets": 12,
+   "lidas": 601,
+   "doCurso": 2,
+   "aRevisar": 4,
+   "descartadas": 589,
+   "warnings": []
+  }
+ ],
+ "aulas": [
+  {
+   "id": "eng05510-CC1-1-600-predio-central-sala-09",
+   "code": "ENG05510",
+   "ref": "ENG05510",
+   "name": "Estatística Básica",
+   "turma": "CC1",
+   "day": 1,
+   "start": "10:00",
+   "end": "12:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 09"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 09",
+    "cell": "B8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "mpa06839-CC1-1-840-predio-central-sala-04",
+   "code": "MPA06839",
+   "ref": "MPA06839",
+   "name": "Cálculo A",
+   "turma": "CC1",
+   "day": 1,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "B12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10080-CC1-1-840-predio-central-sala-05",
+   "code": "COM10080",
+   "ref": "COM10080",
+   "name": "Lógica Computacional II",
+   "turma": "CC1",
+   "day": 1,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 05"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": " Sala 05",
+    "cell": "B12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10393-CC1-1-960-predio-central-sala-04",
+   "code": "COM10393",
+   "ref": "COM10393",
+   "name": "Métodos de Otimização",
+   "turma": "CC1",
+   "day": 1,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "B14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10082-CC1-1-960-predio-central-maracana",
+   "code": "COM10082",
+   "ref": "COM10082",
+   "name": "Programação II",
+   "turma": "CC1",
+   "day": 1,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Maracanã"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "\"Maracanã\"",
+    "cell": "B14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com06996-x-1-1080-predio-central-sala-07",
+   "code": null,
+   "ref": "COM06996",
+   "name": "Informática e Sociedade",
+   "turma": null,
+   "day": 1,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 07"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 07",
+    "cell": "B16"
+   },
+   "extra": [
+    "SI1 -",
+    "Profª Larice"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com10129-x-1-1200-ciclo-basico-sala-03",
+   "code": null,
+   "ref": "COM10129",
+   "name": "Banco de Dados",
+   "turma": null,
+   "day": 1,
+   "start": "20:00",
+   "end": "22:00",
+   "local": {
+    "group": "Ciclo Básico",
+    "room": "Sala 03"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "ciclo-basico",
+    "sheet": "Sala 03",
+    "cell": "B18"
+   },
+   "extra": [
+    "SI1",
+    "Prof. Antônio"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "eng06849-CC1-2-600-predio-central-maracana",
+   "code": "ENG06849",
+   "ref": "ENG06849",
+   "name": "Inglês Instrumental",
+   "turma": "CC1",
+   "day": 2,
+   "start": "10:00",
+   "end": "12:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Maracanã"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "\"Maracanã\"",
+    "cell": "C8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10392-CC1-2-600-predio-central-sala-04",
+   "code": "COM10392",
+   "ref": "COM10392",
+   "name": "Linguagens de Programação",
+   "turma": "CC1",
+   "day": 2,
+   "start": "10:00",
+   "end": "12:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "C8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "mpa06840-CC1-2-840-predio-central-sala-09",
+   "code": "MPA06840",
+   "ref": "MPA06840",
+   "name": "Vetores e Geometria Analítica",
+   "turma": "CC1",
+   "day": 2,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 09"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 09",
+    "cell": "C12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "mpa10077-CC1-2-960-predio-central-sala-06",
+   "code": "MPA10077",
+   "ref": "MPA10077",
+   "name": "Cálculo C",
+   "turma": "CC1",
+   "day": 2,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 06"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 06",
+    "cell": "C14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com06850-CC1-2-960-predio-central-sala-04",
+   "code": "COM06850",
+   "ref": "COM06850",
+   "name": "Introdução à Ciência da Computação",
+   "turma": "CC1",
+   "day": 2,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "C14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10129-x-2-1080-ciclo-basico-sala-03",
+   "code": null,
+   "ref": "COM10129",
+   "name": "Banco de Dados",
+   "turma": null,
+   "day": 2,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Ciclo Básico",
+    "room": "Sala 03"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "ciclo-basico",
+    "sheet": "Sala 03",
+    "cell": "C16"
+   },
+   "extra": [
+    "SI1",
+    "Prof. Antônio"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com06992-x-2-1080-predio-central-sala-07",
+   "code": "COM06992",
+   "ref": "COM06992",
+   "name": "Estruturas de Dados I",
+   "turma": null,
+   "day": 2,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 07"
+   },
+   "status": "revisar",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 07",
+    "cell": "C16"
+   },
+   "extra": [],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "eng06854-x-2-1200-ciclo-basico-sala-03",
+   "code": null,
+   "ref": "ENG06854",
+   "name": "Português Instrumental",
+   "turma": null,
+   "day": 2,
+   "start": "20:00",
+   "end": "22:00",
+   "local": {
+    "group": "Ciclo Básico",
+    "room": "Sala 03"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "ciclo-basico",
+    "sheet": "Sala 03",
+    "cell": "C18"
+   },
+   "extra": [
+    "SI1"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "eng05510-CC1-3-600-predio-central-sala-09",
+   "code": "ENG05510",
+   "ref": "ENG05510",
+   "name": "Estatística Básica",
+   "turma": "CC1",
+   "day": 3,
+   "start": "10:00",
+   "end": "12:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 09"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 09",
+    "cell": "D8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "mpa06839-CC1-3-840-predio-central-sala-04",
+   "code": "MPA06839",
+   "ref": "MPA06839",
+   "name": "Cálculo A",
+   "turma": "CC1",
+   "day": 3,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "D12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10792-CC1-3-840-predio-central-sala-09",
+   "code": "COM10792",
+   "ref": "COM10792",
+   "name": "Inteligência Artificial",
+   "turma": "CC1",
+   "day": 3,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 09"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 09",
+    "cell": "D12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com06851-CC1-3-960-predio-central-maracana",
+   "code": "COM06851",
+   "ref": "COM06851",
+   "name": "Matemática Discreta",
+   "turma": "CC1",
+   "day": 3,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Maracanã"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "\"Maracanã\"",
+    "cell": "D14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10081-CC1-3-960-predio-central-sala-04",
+   "code": "COM10081",
+   "ref": "COM10081",
+   "name": "Metodologia de Pesquisa em Informática",
+   "turma": "CC1",
+   "day": 3,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "D14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10395-CC1-3-960-predio-central-sala-09",
+   "code": "COM10395",
+   "ref": "COM10395",
+   "name": "Teoria da Computação",
+   "turma": "CC1",
+   "day": 3,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 09"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 09",
+    "cell": "D14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10616-x-3-1080-predio-central-sala-07",
+   "code": null,
+   "ref": "COM10616",
+   "name": "Sistemas Distribuídos",
+   "turma": null,
+   "day": 3,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 07"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 07",
+    "cell": "D16"
+   },
+   "extra": [
+    "SI1 -",
+    "Prof. Helder"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com10607-CC1-3-1200-ciclo-basico-sala-06",
+   "code": null,
+   "ref": "COM10607",
+   "name": "Computação Forense",
+   "turma": "CC1",
+   "day": 3,
+   "start": "20:00",
+   "end": "22:00",
+   "local": {
+    "group": "Ciclo Básico",
+    "room": "Sala 06"
+   },
+   "status": "curso",
+   "via": "turma",
+   "source": {
+    "id": "ciclo-basico",
+    "sheet": "Sala 06",
+    "cell": "D18"
+   },
+   "extra": [
+    "prof. Paulo"
+   ],
+   "issues": [
+    {
+     "kind": "sem-codigo-turma",
+     "text": "A planilha não traz o código; a disciplina foi identificada pelo nome e pela turma CC1."
+    }
+   ]
+  },
+  {
+   "id": "cfm10426-CC1-4-480-predio-central-sala-04",
+   "code": "CFM10426",
+   "ref": "CFM10426",
+   "name": "Administração e Economia",
+   "turma": "CC1",
+   "day": 4,
+   "start": "08:00",
+   "end": "10:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "E6"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "cfm10426-CC1-4-600-predio-central-maracana",
+   "code": "CFM10426",
+   "ref": "CFM10426",
+   "name": "Administração e Economia",
+   "turma": "CC1",
+   "day": 4,
+   "start": "10:00",
+   "end": "12:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Maracanã"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "\"Maracanã\"",
+    "cell": "E8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10392-CC1-4-600-predio-central-sala-04",
+   "code": "COM10392",
+   "ref": "COM10392",
+   "name": "Linguagens de Programação",
+   "turma": "CC1",
+   "day": 4,
+   "start": "10:00",
+   "end": "12:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "E8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10080-CC1-4-600-predio-central-sala-09",
+   "code": "COM10080",
+   "ref": "COM10080",
+   "name": "Lógica Computacional II",
+   "turma": "CC1",
+   "day": 4,
+   "start": "10:00",
+   "end": "12:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 09"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 09",
+    "cell": "E8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "dqf10079-CC1-4-840-predio-central-sala-04",
+   "code": "DQF10079",
+   "ref": "DQF10079",
+   "name": "Fundamentos de Física III",
+   "turma": "CC1",
+   "day": 4,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "E12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10792-CC1-4-840-predio-central-sala-09",
+   "code": "COM10792",
+   "ref": "COM10792",
+   "name": "Inteligência Artificial",
+   "turma": "CC1",
+   "day": 4,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 09"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 09",
+    "cell": "E12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "optativa-pln-juliana-CC1-4-960-predio-central-sala-04",
+   "code": null,
+   "ref": null,
+   "name": "Optativa PLN - Juliana",
+   "turma": "CC1",
+   "day": 4,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "revisar",
+   "via": "turma",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "E14"
+   },
+   "extra": [],
+   "issues": [
+    {
+     "kind": "fora-do-curriculo",
+     "text": "A planilha indica a turma CC1 (Ciência da Computação), mas esta disciplina não consta no currículo. Pode ser uma optativa nova; confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com10082-CC1-4-960-predio-central-maracana",
+   "code": "COM10082",
+   "ref": "COM10082",
+   "name": "Programação II",
+   "turma": "CC1",
+   "day": 4,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Maracanã"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "\"Maracanã\"",
+    "cell": "E14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "mpa06840-CC1-4-960-predio-central-sala-09",
+   "code": "MPA06840",
+   "ref": "MPA06840",
+   "name": "Vetores e Geometria Analítica",
+   "turma": "CC1",
+   "day": 4,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 09"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 09",
+    "cell": "E14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10607-CC1-4-1080-ciclo-basico-sala-06",
+   "code": null,
+   "ref": "COM10607",
+   "name": "Computação Forense",
+   "turma": "CC1",
+   "day": 4,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Ciclo Básico",
+    "room": "Sala 06"
+   },
+   "status": "curso",
+   "via": "turma",
+   "source": {
+    "id": "ciclo-basico",
+    "sheet": "Sala 06",
+    "cell": "E16"
+   },
+   "extra": [
+    "prof. Paulo"
+   ],
+   "issues": [
+    {
+     "kind": "sem-codigo-turma",
+     "text": "A planilha não traz o código; a disciplina foi identificada pelo nome e pela turma CC1."
+    }
+   ]
+  },
+  {
+   "id": "com06992-x-4-1080-ciclo-basico-sala-03",
+   "code": "COM06992",
+   "ref": "COM06992",
+   "name": "Estruturas de Dados I",
+   "turma": null,
+   "day": 4,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Ciclo Básico",
+    "room": "Sala 03"
+   },
+   "status": "revisar",
+   "via": "codigo",
+   "source": {
+    "id": "ciclo-basico",
+    "sheet": "Sala 03",
+    "cell": "E16"
+   },
+   "extra": [],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com10076-CC1-5-480-predio-central-sala-04",
+   "code": "COM10076",
+   "ref": "COM10076",
+   "name": "Arquitetura de Computadores",
+   "turma": "CC1",
+   "day": 5,
+   "start": "08:00",
+   "end": "12:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "F6"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "mpa06839-CC1-5-840-predio-central-sala-04",
+   "code": "MPA06839",
+   "ref": "MPA06839",
+   "name": "Cálculo A",
+   "turma": "CC1",
+   "day": 5,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "F12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "mpa10077-CC1-5-840-predio-central-sala-06",
+   "code": "MPA10077",
+   "ref": "MPA10077",
+   "name": "Cálculo C",
+   "turma": "CC1",
+   "day": 5,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 06"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 06",
+    "cell": "F12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "dqf10079-CC1-5-960-predio-central-sala-04",
+   "code": "DQF10079",
+   "ref": "DQF10079",
+   "name": "Fundamentos de Física III",
+   "turma": "CC1",
+   "day": 5,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 04"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 04",
+    "cell": "F14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com06851-CC1-5-960-predio-central-maracana",
+   "code": "COM06851",
+   "ref": "COM06851",
+   "name": "Matemática Discreta",
+   "turma": "CC1",
+   "day": 5,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Maracanã"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "\"Maracanã\"",
+    "cell": "F14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10395-CC1-5-960-predio-central-sala-09",
+   "code": "COM10395",
+   "ref": "COM10395",
+   "name": "Teoria da Computação",
+   "turma": "CC1",
+   "day": 5,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 09"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 09",
+    "cell": "F14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10132-x-5-1080-predio-central-sala-07",
+   "code": null,
+   "ref": "COM10132",
+   "name": "Sistemas Operacionais",
+   "turma": null,
+   "day": 5,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Prédio Central",
+    "room": "Sala 07"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "predio-central",
+    "sheet": "Sala 07",
+    "cell": "F16"
+   },
+   "extra": [
+    "Profa. Valeria Alves da Silva"
+   ],
+   "issues": [
+    {
+     "kind": "sem-codigo",
+     "text": "A planilha não traz o código; a disciplina foi identificada só pelo nome. Confirme com a coordenação."
+    }
+   ]
+  }
+ ]
+}

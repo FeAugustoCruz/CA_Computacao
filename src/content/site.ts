@@ -27,6 +27,7 @@ export const nav = [
   { page: 'sobre', label: 'Sobre' },
   { page: 'integrantes', label: 'Integrantes' },
   { page: 'grade', label: 'Grade curricular' },
+  { page: 'horarios', label: 'Horários' },
   { page: 'documentos', label: 'Documentos' },
   { page: 'complementares', label: 'Complementares' },
   { page: 'contato', label: 'Contato' },
