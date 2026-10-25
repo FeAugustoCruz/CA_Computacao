@@ -31,6 +31,16 @@ Início, Sobre, Integrantes, Grade curricular, Documentos, Complementares e Cont
 
 As marcações de disciplinas concluídas ficam no `localStorage` do navegador (chave `ca-grade-concluidas-v1`): não há conta nem servidor, então cada pessoa vê só o próprio progresso e ele não passa de um aparelho para outro. A porcentagem considera as 47 obrigatórias (inclui Estágio e TCC I e II). Optativas são contadas à parte porque o PDF não informa quantas são exigidas. Para atualizar a matriz: `python3 scripts/gen-curriculo.py novo-curriculo.pdf`.
 
+## Horários das aulas
+
+A página **Horários** junta, numa só tela, as aulas de Ciência da Computação lidas das planilhas oficiais da UFES Alegre: salas (Prédio Central e Ciclo Básico) e laboratórios (Chi-Chiu e Reuni). Há tabela, grade semanal, filtros e detalhes de cada disciplina.
+
+- **Coleta:** `scripts/horarios/` baixa as planilhas, interpreta sem depender de posições fixas de célula e grava `src/data/horarios.json`. Rode `npm run horarios:update` (precisa de acesso ao site da UFES) e `npm test` para os testes.
+- **Quais disciplinas aparecem:** só as do currículo em `src/content/curriculo.ts` (107 disciplinas, gerado do PDF oficial). O código tem prioridade; aulas reconhecidas só pelo nome ficam marcadas como **a confirmar**.
+- **Atualização automática:** o workflow `.github/workflows/horarios.yml` roda todo dia às 06:00 (Brasília), grava o JSON na `main` se algo mudou e dispara o deploy. Também dá para rodá-lo à mão na aba Actions. Se uma coleta falhar, os últimos dados válidos continuam no ar e o site avisa.
+- **Não é tempo real:** a página informa a data da última coleta e avisa quando os dados estão antigos ou a atualização falhou.
+- Enquanto a primeira coleta não rodar, `horarios.json` está vazio e a página mostra um aviso com links para as páginas oficiais.
+
 ## Pendências conhecidas
 
 - **Logotipo:** o emblema oficial fica em `src/assets/logo-ca.png` e é usado no cabeçalho e no rodapé (`LogoMark` em `src/components/Logo.tsx`). O ícone da aba (favicon) é uma versão 64×64 da mesma imagem, embutida em `index.html`. Para trocar a logo, substitua o PNG e gere o favicon de novo.

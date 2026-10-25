@@ -1,0 +1,48 @@
+name: Atualizar horários
+
+# Baixa as planilhas oficiais da UFES Alegre, interpreta e grava src/data/horarios.json.
+# Roda todo dia às 06:00 (horário de Brasília) e também sob demanda (Actions > Atualizar horários > Run workflow).
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write # grava o JSON atualizado na main
+  actions: write # dispara o deploy depois do commit
+
+concurrency:
+  group: horarios
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Testes do interpretador de planilhas
+        run: npm test
+      - name: Coletar e interpretar as planilhas
+        run: node scripts/horarios/update.mjs
+      - name: Publicar se houve mudança
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- src/data/horarios.json; then
+            echo "Sem mudanças nos dados."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/horarios.json
+          git commit -m "Atualiza horários das aulas ($(date -u +%Y-%m-%d))"
+          git push origin HEAD:main
+          # Pushes feitos com o GITHUB_TOKEN não disparam outros workflows; o deploy é pedido de forma explícita.
+          gh workflow run deploy.yml --ref main

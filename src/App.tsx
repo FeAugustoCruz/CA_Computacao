@@ -8,6 +8,7 @@ import { Contato } from './pages/Contato'
 import { Documentos } from './pages/Documentos'
 import { Grade } from './pages/Grade'
 import { Home } from './pages/Home'
+import { Horarios } from './pages/Horarios'
 import { Integrantes } from './pages/Integrantes'
 import { NaoEncontrada } from './pages/NaoEncontrada'
 import { Sobre } from './pages/Sobre'
@@ -34,6 +35,7 @@ export default function App() {
     case 'sobre': page = <Sobre />; break
     case 'integrantes': page = <Integrantes />; break
     case 'grade': page = <Grade />; break
+    case 'horarios': page = <Horarios />; break
     case 'documentos': page = <Documentos />; break
     case 'complementares': page = <Complementares />; break
     case 'contato': page = <Contato />; break
