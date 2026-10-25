@@ -254,3 +254,31 @@ test('atualização: planilha lida mas sem aulas reconhecidas não apaga os dado
   assert.equal(b.sources[0].status, 'desatualizada')
   assert.match(b.sources[0].error, /nenhuma aula do curso/)
 })
+
+test('atualização: usa o link direto do Google Sheets e volta à página oficial se ele falhar', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'horarios-'))
+  const gsheet = 'https://docs.google.com/spreadsheets/d/e/2PACX-TESTE/pubhtml'
+  const sources = [{ id: 'predio-central', page: 'salas', group: 'Prédio Central', directUrl: gsheet, match: [/predio\s+central/] }]
+  const planilha = await gradeXlsx()
+  const pedidos = []
+  let googleOk = true
+  const fetchImpl = async (url) => {
+    pedidos.push(url)
+    if (url === 'https://docs.google.com/spreadsheets/d/e/2PACX-TESTE/pub?output=xlsx') return googleOk ? new Response(planilha) : new Response('x', { status: 403 })
+    if (new URL(url).pathname === '/horario/salas') return new Response('<h2>Prédio Central</h2><a href="/f/central.xlsx">Horário</a>')
+    if (new URL(url).pathname === '/f/central.xlsx') return new Response(planilha)
+    return new Response('x', { status: 404 })
+  }
+  const opts = { out: join(dir, 'o.json'), sources, fetchImpl, http: { retries: 0, backoffMs: 0 }, curriculumFile: new URL('../../src/content/curriculo.ts', import.meta.url).pathname }
+
+  const a = await runUpdate({ ...opts, now: new Date('2026-10-26T09:00:00Z') })
+  assert.equal(a.sources[0].status, 'ok')
+  assert.ok(a.aulas.length > 0)
+  assert.ok(!pedidos.some((u) => u.includes('/horario/salas')), 'não precisa abrir a página oficial quando o link direto funciona')
+
+  googleOk = false
+  const b = await runUpdate({ ...opts, now: new Date('2026-10-27T09:00:00Z') })
+  assert.equal(b.sources[0].status, 'ok')
+  assert.equal(b.aulas.length, a.aulas.length)
+  assert.ok(b.sources[0].warnings.some((w) => /link direto/.test(w)))
+})

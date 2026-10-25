@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url'
 import { COURSE, PAGES, SCHEMA_VERSION, SOURCES } from './config.mjs'
 import { consolidate } from './consolidate.mjs'
 import { loadCurriculum } from './curriculum.mjs'
-import { findLinks, pickLink } from './discover.mjs'
+import { findLinks, pickLink, toDownloadUrl } from './discover.mjs'
 import { httpGet } from './http.mjs'
 import { parseSheet } from './parse-sheet.mjs'
 import { readWorkbook } from './workbook.mjs'
@@ -66,15 +66,29 @@ async function collectSource(source, ctx) {
       buf = readFileSync(join(ctx.local, file))
       hint = meta.fileName = file
     } else {
-      const links = await ctx.linksOf(source.page)
-      const { link, warning } = pickLink(links, source)
-      if (!link) {
-        meta.status = 'nao-encontrada'
-        meta.error = `${warning[0].toUpperCase()}${warning.slice(1)}.`
-        return { meta, raw: null }
+      let link = null
+      let res = null
+      if (source.directUrl) {
+        const direct = { href: source.directUrl, downloadUrl: toDownloadUrl(source.directUrl), fileName: '' }
+        try {
+          res = await httpGet(direct.downloadUrl, ctx.http)
+          link = direct
+        } catch (e) {
+          meta.warnings.push(`O link direto da planilha falhou (${e.message}); usei a página oficial.`)
+        }
       }
-      if (warning) meta.warnings.push(`${warning[0].toUpperCase()}${warning.slice(1)}.`)
-      const res = await httpGet(link.downloadUrl, ctx.http)
+      if (!res) {
+        const links = await ctx.linksOf(source.page)
+        const picked = pickLink(links, source)
+        link = picked.link
+        if (!link) {
+          meta.status = 'nao-encontrada'
+          meta.error = `${picked.warning[0].toUpperCase()}${picked.warning.slice(1)}.`
+          return { meta, raw: null }
+        }
+        if (picked.warning) meta.warnings.push(`${picked.warning[0].toUpperCase()}${picked.warning.slice(1)}.`)
+        res = await httpGet(link.downloadUrl, ctx.http)
+      }
       buf = res.buf
       hint = link.fileName
       meta.fileUrl = link.href

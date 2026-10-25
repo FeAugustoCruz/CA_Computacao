@@ -16,12 +16,26 @@ export const PAGES = {
 
 /**
  * Cada fonte é uma planilha ligada por um link numa das páginas.
+ * `directUrl` (opcional): link oficial da planilha publicada (Google Sheets "Publicar na web"). É tentado primeiro;
+ * se falhar, a coleta volta a procurar o link na página oficial.
  * `match`: expressões (aplicadas a texto sem acentos e em minúsculas) que identificam o link da fonte
  * pelo texto do link, nome do arquivo, título da seção ou texto ao redor.
  */
 export const SOURCES = [
-  { id: 'predio-central', page: 'salas', group: 'Prédio Central', match: [/predio\s+central/] },
-  { id: 'ciclo-basico', page: 'salas', group: 'Ciclo Básico', match: [/ciclo\s+basico/] },
+  {
+    id: 'predio-central',
+    page: 'salas',
+    group: 'Prédio Central',
+    directUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQziQtbnCTvmYk2F9J9tw6W0qVvYceMi3IsE-pXRdF6Cc8oIyxsCW4SZbho_AJDj538tcqaG4s8XFEn/pubhtml',
+    match: [/predio\s+central/],
+  },
+  {
+    id: 'ciclo-basico',
+    page: 'salas',
+    group: 'Ciclo Básico',
+    directUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJWpCXgWLk-M_rTwUDKNjaky40wExieiDrBlMJoA_tU_XOGK-ngWWzJtBnkSCpwCFDY4Z46GwdqCum/pubhtml',
+    match: [/ciclo\s+basico/],
+  },
   { id: 'chi-chiu', page: 'laboratorios', group: 'Laboratório Chi-Chiu', match: [/chi[\s_-]*chiu/] },
   { id: 'reuni', page: 'laboratorios', group: 'Laboratório Reuni', match: [/\breuni\b/] },
 ]

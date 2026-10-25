@@ -35,7 +35,7 @@ As marcações de disciplinas concluídas ficam no `localStorage` do navegador (
 
 A página **Horários** junta, numa só tela, as aulas de Ciência da Computação lidas das planilhas oficiais da UFES Alegre: salas (Prédio Central e Ciclo Básico) e laboratórios (Chi-Chiu e Reuni). Há tabela, grade semanal, filtros e detalhes de cada disciplina.
 
-- **Coleta:** `scripts/horarios/` baixa as planilhas, interpreta sem depender de posições fixas de célula e grava `src/data/horarios.json`. Rode `npm run horarios:update` (precisa de acesso ao site da UFES) e `npm test` para os testes.
+- **Coleta:** `scripts/horarios/` baixa as planilhas, interpreta sem depender de posições fixas de célula e grava `src/data/horarios.json`. Prédio Central e Ciclo Básico são lidos direto das planilhas publicadas no Google Sheets (links em `scripts/horarios/config.mjs`); se o link falhar, a coleta procura a planilha na página oficial. Rode `npm run horarios:update` (precisa de acesso ao site da UFES) e `npm test` para os testes.
 - **Quais disciplinas aparecem:** só as do currículo em `src/content/curriculo.ts` (107 disciplinas, gerado do PDF oficial). O código tem prioridade; aulas reconhecidas só pelo nome ficam marcadas como **a confirmar**.
 - **Atualização automática:** o workflow `.github/workflows/horarios.yml` roda todo dia às 06:00 (Brasília), grava o JSON na `main` se algo mudou e dispara o deploy. Também dá para rodá-lo à mão na aba Actions. Se uma coleta falhar, os últimos dados válidos continuam no ar e o site avisa.
 - **Não é tempo real:** a página informa a data da última coleta e avisa quando os dados estão antigos ou a atualização falhou.
