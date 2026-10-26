@@ -1,11 +1,11 @@
 {
  "schemaVersion": 1,
  "course": "Ciência da Computação",
- "generatedAt": "2026-10-25T17:20:07.738Z",
+ "generatedAt": "2026-10-26T15:56:29.290Z",
  "lastAttempt": {
-  "at": "2026-10-25T17:20:07.738Z",
-  "ok": true,
-  "message": null
+  "at": "2026-10-26T15:56:29.290Z",
+  "ok": false,
+  "message": "Não foi possível atualizar: Laboratório Chi-Chiu (falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed); Laboratório Reuni (falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed)."
  },
  "sources": [
   {
@@ -14,7 +14,7 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQziQtbnCTvmYk2F9J9tw6W0qVvYceMi3IsE-pXRdF6Cc8oIyxsCW4SZbho_AJDj538tcqaG4s8XFEn/pubhtml",
    "fileName": null,
-   "fetchedAt": "2026-10-25T17:20:07.738Z",
+   "fetchedAt": "2026-10-26T15:56:29.290Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
@@ -32,7 +32,7 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSJWpCXgWLk-M_rTwUDKNjaky40wExieiDrBlMJoA_tU_XOGK-ngWWzJtBnkSCpwCFDY4Z46GwdqCum/pubhtml",
    "fileName": null,
-   "fetchedAt": "2026-10-25T17:20:07.738Z",
+   "fetchedAt": "2026-10-26T15:56:29.290Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
@@ -42,6 +42,42 @@
    "doCurso": 2,
    "aRevisar": 4,
    "descartadas": 589,
+   "warnings": []
+  },
+  {
+   "id": "chi-chiu",
+   "label": "Laboratório Chi-Chiu",
+   "pageUrl": "https://graduacao.alegre.ufes.br/horario/laboratorios",
+   "fileUrl": null,
+   "fileName": null,
+   "fetchedAt": null,
+   "fileLastModified": null,
+   "sheetUpdatedText": null,
+   "status": "falhou",
+   "error": "falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed",
+   "sheets": 0,
+   "lidas": 0,
+   "doCurso": 0,
+   "aRevisar": 0,
+   "descartadas": 0,
+   "warnings": []
+  },
+  {
+   "id": "reuni",
+   "label": "Laboratório Reuni",
+   "pageUrl": "https://graduacao.alegre.ufes.br/horario/laboratorios",
+   "fileUrl": null,
+   "fileName": null,
+   "fetchedAt": null,
+   "fileLastModified": null,
+   "sheetUpdatedText": null,
+   "status": "falhou",
+   "error": "falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed",
+   "sheets": 0,
+   "lidas": 0,
+   "doCurso": 0,
+   "aRevisar": 0,
+   "descartadas": 0,
    "warnings": []
   }
  ],
