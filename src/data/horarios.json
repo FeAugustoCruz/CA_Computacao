@@ -1,9 +1,9 @@
 {
  "schemaVersion": 1,
  "course": "Ciência da Computação",
- "generatedAt": "2026-10-27T15:12:23.647Z",
+ "generatedAt": "2026-10-28T15:47:32.313Z",
  "lastAttempt": {
-  "at": "2026-10-27T15:12:23.647Z",
+  "at": "2026-10-28T15:47:32.313Z",
   "ok": false,
   "message": "Não foi possível atualizar: Laboratório Chi-Chiu (falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed); Laboratório Reuni (falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed)."
  },
@@ -14,16 +14,16 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQziQtbnCTvmYk2F9J9tw6W0qVvYceMi3IsE-pXRdF6Cc8oIyxsCW4SZbho_AJDj538tcqaG4s8XFEn/pubhtml",
    "fileName": null,
-   "fetchedAt": "2026-10-27T15:12:23.647Z",
+   "fetchedAt": "2026-10-28T15:47:32.313Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
    "error": null,
    "sheets": 7,
-   "lidas": 419,
+   "lidas": 411,
    "doCurso": 30,
    "aRevisar": 5,
-   "descartadas": 347,
+   "descartadas": 339,
    "warnings": []
   },
   {
@@ -32,16 +32,16 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSJWpCXgWLk-M_rTwUDKNjaky40wExieiDrBlMJoA_tU_XOGK-ngWWzJtBnkSCpwCFDY4Z46GwdqCum/pubhtml",
    "fileName": null,
-   "fetchedAt": "2026-10-27T15:12:23.647Z",
+   "fetchedAt": "2026-10-28T15:47:32.313Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
    "error": null,
    "sheets": 12,
-   "lidas": 603,
+   "lidas": 594,
    "doCurso": 2,
    "aRevisar": 4,
-   "descartadas": 591,
+   "descartadas": 582,
    "warnings": []
   },
   {
