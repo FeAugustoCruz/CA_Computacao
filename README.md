@@ -1,5 +1,7 @@
 # Site do CA de Ciência da Computação · UFES Alegre
 
+## LINK PARA PAGINA DE ADM: https://feaugustocruz.github.io/CA_Computacao/admin.html
+
 React 18 + TypeScript + Tailwind CSS 3, empacotado com Vite em um único `index.html`.
 
 ## Rodar
