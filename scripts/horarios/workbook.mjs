@@ -1,3 +1,4 @@
+// Funciona no Node e no navegador (painel de envio de planilhas), por isso não usa Buffer.
 // Leitura de planilhas para uma estrutura simples: abas com uma grade de células.
 // Cada célula: { v: texto, rs: linhas ocupadas, cs: colunas ocupadas, m: true se faz parte de uma mescla e não é a célula principal }.
 import ExcelJS from 'exceljs'
@@ -23,11 +24,11 @@ export const cellRef = (r, c) => `${colLetters(c + 1)}${r + 1}`
 
 /** Identifica o formato pelos primeiros bytes. */
 export function sniff(buf) {
-  const b = Buffer.from(buf.subarray(0, 8))
+  const b = new Uint8Array(buf.subarray(0, 8))
   if (b[0] === 0x50 && b[1] === 0x4b) return 'zip'
   if (b[0] === 0xd0 && b[1] === 0xcf && b[2] === 0x11 && b[3] === 0xe0) return 'xls'
-  if (b.toString('latin1', 0, 4) === '%PDF') return 'pdf'
-  const head = Buffer.from(buf.subarray(0, 512)).toString('utf8').trimStart().toLowerCase()
+  if (String.fromCharCode(b[0], b[1], b[2], b[3]) === '%PDF') return 'pdf'
+  const head = new TextDecoder('utf-8').decode(buf.subarray(0, 512)).trimStart().toLowerCase()
   if (head.startsWith('<!doctype html') || head.startsWith('<html') || head.startsWith('<?xml')) return 'html'
   return 'text'
 }
@@ -39,7 +40,7 @@ export function sniff(buf) {
 export async function readWorkbook(buf, hint = '') {
   const kind = sniff(buf)
   if (kind === 'zip') return readXlsx(buf, hint)
-  if (kind === 'text') return [{ name: hint || 'CSV', grid: readCsv(Buffer.from(buf).toString('utf8').replace(/^﻿/, '')) }]
+  if (kind === 'text') return [{ name: hint || 'CSV', grid: readCsv(new TextDecoder('utf-8').decode(buf).replace(/^﻿/, '')) }]
   if (kind === 'xls') throw new UnsupportedFormatError('arquivo no formato antigo .xls (Excel 97-2003), ainda não suportado; salve como .xlsx')
   if (kind === 'pdf') throw new UnsupportedFormatError('o arquivo é um PDF, não uma planilha')
   throw new UnsupportedFormatError('o endereço devolveu uma página da web (HTML/XML) em vez de uma planilha; o arquivo pode exigir login ou não é um link direto')

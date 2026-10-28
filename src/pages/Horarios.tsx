@@ -25,7 +25,8 @@ import {
   type Filtros,
   type GrupoDisciplina,
 } from '../lib/horarios'
-import type { Aula, HorariosFonte } from '../types'
+import { buscarPublicados, maisRecente } from '../lib/remoto'
+import type { Aula, HorariosData, HorariosFonte } from '../types'
 
 type Vista = 'tabela' | 'grade'
 
@@ -467,8 +468,8 @@ const STATUS_FONTE: Record<HorariosFonte['status'], string> = {
   'nao-encontrada': 'Planilha não encontrada',
 }
 
-function Fontes() {
-  const fontes = horarios.sources
+function Fontes({ data }: { data: HorariosData }) {
+  const fontes = data.sources
   return (
     <section aria-labelledby="fontes-t" className="mt-12">
       <h2 id="fontes-t" className="display text-2xl">De onde vêm os dados</h2>
@@ -518,15 +519,23 @@ export function Horarios() {
   const [aberta, setAberta] = useState<string | null>(null)
   const set = (p: Partial<Filtros>) => setF((cur) => ({ ...cur, ...p }))
 
-  const estado = useMemo(() => estadoDados(horarios, Date.now()), [])
-  const opts = useMemo(() => opcoes(horarios.aulas), [])
-  const todos = useMemo(() => agrupar(horarios.aulas), [])
-  const filtradas = useMemo(() => filtrar(horarios.aulas, f), [f])
+  // Começa com os horários embutidos no site e troca pelos publicados no painel de administração, se forem mais recentes.
+  const [data, setData] = useState<HorariosData>(horarios)
+  useEffect(() => {
+    const ctrl = new AbortController()
+    buscarPublicados(ctrl.signal).then((remoto) => remoto && setData((atual) => maisRecente(atual, remoto)))
+    return () => ctrl.abort()
+  }, [])
+
+  const estado = useMemo(() => estadoDados(data, Date.now()), [data])
+  const opts = useMemo(() => opcoes(data.aulas), [data])
+  const todos = useMemo(() => agrupar(data.aulas), [data])
+  const filtradas = useMemo(() => filtrar(data.aulas, f), [data, f])
   const grupos = useMemo(() => agrupar(filtradas), [filtradas])
   const total = contar(filtradas)
   const ativos = filtrosAtivos(f)
   const grupoAberto = aberta ? (todos.find((g) => g.key === aberta) ?? grupos.find((g) => g.key === aberta) ?? null) : null
-  const quando = fmtDataHora(horarios.generatedAt)
+  const quando = fmtDataHora(data.generatedAt)
   const aConfirmar = filtradas.filter((a) => a.status === 'revisar').length
 
   return (
@@ -560,7 +569,7 @@ export function Horarios() {
           )}
           {estado.falhou && !estado.vazio && (
             <Aviso titulo="A última atualização falhou">
-              {horarios.lastAttempt?.message ?? 'Não foi possível atualizar.'} Estes são os últimos dados válidos{quando ? `, de ${quando}` : ''}.
+              {data.lastAttempt?.message ?? 'Não foi possível atualizar.'} Estes são os últimos dados válidos{quando ? `, de ${quando}` : ''}.
             </Aviso>
           )}
           {!estado.falhou && estado.fontesComProblema > 0 && (
@@ -611,7 +620,7 @@ export function Horarios() {
           </>
         )}
 
-        <Fontes />
+        <Fontes data={data} />
       </div>
 
       {grupoAberto && <Detalhe grupo={grupoAberto} onFechar={() => setAberta(null)} />}
