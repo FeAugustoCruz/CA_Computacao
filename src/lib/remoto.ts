@@ -2,8 +2,20 @@
 // Sem as variáveis VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY no build, o recurso fica desligado e o site usa só o JSON embutido.
 import type { HorariosData } from '../types'
 
-const url = (import.meta.env.VITE_SUPABASE_URL as string | undefined)?.trim().replace(/\/+$/, '') ?? ''
-const key = (import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined)?.trim() ?? ''
+/** Aceita o endereço do projeto mesmo sem "https://" ou com caminho no fim (ex.: .../rest/v1): usa só a origem. */
+function normalizarUrl(v: string | undefined): string {
+  let u = (v ?? '').trim().replace(/^["']|["']$/g, '')
+  if (!u) return ''
+  if (!/^https?:\/\//i.test(u)) u = `https://${u}`
+  try {
+    return new URL(u).origin
+  } catch {
+    return ''
+  }
+}
+
+const url = normalizarUrl(import.meta.env.VITE_SUPABASE_URL as string | undefined)
+const key = ((import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined) ?? '').trim().replace(/^["']|["']$/g, '')
 
 export const supabaseConfig = { url, key, ativo: Boolean(url && key) }
 

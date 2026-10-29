@@ -73,7 +73,13 @@ export function Admin() {
         headers: { ...cabecalhos(), 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: String(f.get('email')).trim(), password: String(f.get('senha')) }),
       })
-      if (!res.ok) throw new Error(res.status === 400 || res.status === 401 ? 'E-mail ou senha incorretos.' : `Não foi possível entrar (erro ${res.status}).`)
+      if (!res.ok) {
+        const host = new URL(supabaseConfig.url).host
+        if (res.status === 400) throw new Error('E-mail ou senha incorretos.')
+        if (res.status === 401 || res.status === 403) throw new Error('O servidor recusou a chave pública do site. Confira a variável SUPABASE_ANON_KEY (chave "anon public") e publique o site de novo.')
+        if (res.status === 404) throw new Error(`O endereço ${host} não tem o serviço de login do Supabase. Confira a variável SUPABASE_URL: deve ser a "Project URL" do projeto (https://CODIGO.supabase.co). Depois de mudar a variável, publique o site de novo.`)
+        throw new Error(`Não foi possível entrar (erro ${res.status}).`)
+      }
       const j = (await res.json()) as { access_token: string; expires_in: number; user?: { email?: string } }
       const s: Sessao = { token: j.access_token, email: j.user?.email ?? String(f.get('email')), expira: Date.now() + (j.expires_in - 60) * 1000 }
       try {
