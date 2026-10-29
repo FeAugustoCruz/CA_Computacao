@@ -2,6 +2,9 @@
 
 ## LINK PARA PAGINA DE ADM: https://feaugustocruz.github.io/CA_Computacao/admin.html
 
+## Código para baixar as planilhas:
+Baixe cada uma como Excel (no Google Sheets: Arquivo → Fazer download → .xlsx, ou acrescente pub?output=xlsx no lugar de pubhtml no link)
+
 React 18 + TypeScript + Tailwind CSS 3, empacotado com Vite em um único `index.html`.
 
 ## Rodar
