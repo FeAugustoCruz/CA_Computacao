@@ -59,6 +59,8 @@ Como funciona: a planilha é lida no próprio navegador, com o mesmo leitor da c
 5. No GitHub: *Settings > Secrets and variables > Actions > Variables*, crie `SUPABASE_URL` e `SUPABASE_ANON_KEY` com esses dois valores (a chave anon é pública por desenho; quem protege a gravação são as regras do banco).
 6. Rode o *Deploy* (push na `main` ou *Actions > Deploy > Run workflow*). Para testar localmente, crie um `.env.local` com `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY`.
 
+**Se o login der erro:** "erro 404" ou "O endereço ... não tem o serviço de login" = `SUPABASE_URL` errada (use a *Project URL*, `https://CODIGO.supabase.co`, de *Project Settings > API*); "chave pública recusada" = `SUPABASE_ANON_KEY` errada (use a `anon public`); "e-mail ou senha incorretos" = confira o usuário em *Authentication > Users*. As variáveis só valem no próximo deploy: depois de criá-las ou mudá-las, rode o *Deploy* de novo.
+
 **Atenção:** a coleta automática diária (`horarios.yml`) continua ativa. Como o site usa o dado mais recente, uma coleta bem-sucedida feita depois do envio manual passa a valer no lugar dele. Se preferir só o envio manual, desative o workflow *Atualizar horários* em *Actions*.
 
 ## Pendências conhecidas
