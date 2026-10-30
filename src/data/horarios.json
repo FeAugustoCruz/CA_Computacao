@@ -1,9 +1,9 @@
 {
  "schemaVersion": 1,
  "course": "Ciência da Computação",
- "generatedAt": "2026-10-29T15:55:51.916Z",
+ "generatedAt": "2026-10-30T15:40:10.989Z",
  "lastAttempt": {
-  "at": "2026-10-29T15:55:51.916Z",
+  "at": "2026-10-30T15:40:10.989Z",
   "ok": false,
   "message": "Não foi possível atualizar: Laboratório Chi-Chiu (falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed); Laboratório Reuni (falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed)."
  },
@@ -14,7 +14,7 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQziQtbnCTvmYk2F9J9tw6W0qVvYceMi3IsE-pXRdF6Cc8oIyxsCW4SZbho_AJDj538tcqaG4s8XFEn/pubhtml",
    "fileName": null,
-   "fetchedAt": "2026-10-29T15:55:51.916Z",
+   "fetchedAt": "2026-10-30T15:40:10.989Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
@@ -32,7 +32,7 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSJWpCXgWLk-M_rTwUDKNjaky40wExieiDrBlMJoA_tU_XOGK-ngWWzJtBnkSCpwCFDY4Z46GwdqCum/pubhtml",
    "fileName": null,
-   "fetchedAt": "2026-10-29T15:55:51.916Z",
+   "fetchedAt": "2026-10-30T15:40:10.989Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
