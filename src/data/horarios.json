@@ -1,11 +1,11 @@
 {
  "schemaVersion": 1,
  "course": "Ciência da Computação",
- "generatedAt": "2026-11-05T17:11:32.731Z",
+ "generatedAt": "2026-11-06T16:38:23.145Z",
  "lastAttempt": {
-  "at": "2026-11-05T17:11:32.731Z",
-  "ok": false,
-  "message": "Não foi possível atualizar: Laboratório Chi-Chiu (falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed); Laboratório Reuni (falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed)."
+  "at": "2026-11-06T16:38:23.145Z",
+  "ok": true,
+  "message": null
  },
  "sources": [
   {
@@ -14,7 +14,7 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQziQtbnCTvmYk2F9J9tw6W0qVvYceMi3IsE-pXRdF6Cc8oIyxsCW4SZbho_AJDj538tcqaG4s8XFEn/pubhtml",
    "fileName": null,
-   "fetchedAt": "2026-11-05T17:11:32.731Z",
+   "fetchedAt": "2026-11-06T16:38:23.145Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
@@ -32,52 +32,52 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSJWpCXgWLk-M_rTwUDKNjaky40wExieiDrBlMJoA_tU_XOGK-ngWWzJtBnkSCpwCFDY4Z46GwdqCum/pubhtml",
    "fileName": null,
-   "fetchedAt": "2026-11-05T17:11:32.731Z",
+   "fetchedAt": "2026-11-06T16:38:23.145Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
    "error": null,
    "sheets": 12,
-   "lidas": 603,
+   "lidas": 659,
    "doCurso": 2,
    "aRevisar": 4,
-   "descartadas": 591,
+   "descartadas": 647,
    "warnings": []
   },
   {
    "id": "chi-chiu",
    "label": "Laboratório Chi-Chiu",
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/laboratorios",
-   "fileUrl": null,
-   "fileName": null,
-   "fetchedAt": null,
+   "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRY5g2caIXfP5E9Cx7C1Q7doLQ87x3IzmW6m2HEb9HfY-BPK4sTQ4T86zcxDyd4OV1T05kIAOEsltyb/pubhtml",
+   "fileName": "pubhtml",
+   "fetchedAt": "2026-11-06T16:38:23.145Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
-   "status": "falhou",
-   "error": "falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed",
-   "sheets": 0,
-   "lidas": 0,
-   "doCurso": 0,
-   "aRevisar": 0,
-   "descartadas": 0,
+   "status": "ok",
+   "error": null,
+   "sheets": 4,
+   "lidas": 172,
+   "doCurso": 16,
+   "aRevisar": 17,
+   "descartadas": 106,
    "warnings": []
   },
   {
    "id": "reuni",
    "label": "Laboratório Reuni",
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/laboratorios",
-   "fileUrl": null,
-   "fileName": null,
-   "fetchedAt": null,
+   "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTTGd9f2nP80QJfujahWIja0ZeujYFyZdI0xey93NnIz-gOmH2YmeVRFvV-L_QTD5aB2tssy86IS00J/pubhtml",
+   "fileName": "pubhtml",
+   "fetchedAt": "2026-11-06T16:38:23.145Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
-   "status": "falhou",
-   "error": "falha ao abrir a página oficial: não foi possível baixar https://graduacao.alegre.ufes.br/horario/laboratorios: fetch failed",
-   "sheets": 0,
-   "lidas": 0,
+   "status": "ok",
+   "error": null,
+   "sheets": 8,
+   "lidas": 42,
    "doCurso": 0,
    "aRevisar": 0,
-   "descartadas": 0,
+   "descartadas": 42,
    "warnings": []
   }
  ],
@@ -123,6 +123,29 @@
    "source": {
     "id": "predio-central",
     "sheet": "Sala 04",
+    "cell": "B12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10275-CC1-1-840-laboratorio-chi-chiu-informatica-3",
+   "code": "COM10275",
+   "ref": "COM10275",
+   "name": "Engenharia de Requisitos de Software",
+   "turma": "CC1",
+   "day": 1,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
     "cell": "B12"
    },
    "extra": [],
@@ -175,6 +198,29 @@
    "issues": []
   },
   {
+   "id": "com06842-CC1-1-960-laboratorio-chi-chiu-informatica-1",
+   "code": "COM06842",
+   "ref": "COM06842",
+   "name": "Programação I",
+   "turma": "CC1",
+   "day": 1,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "B14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
    "id": "com10082-CC1-1-960-predio-central-maracana",
    "code": "COM10082",
    "ref": "COM10082",
@@ -196,6 +242,37 @@
    },
    "extra": [],
    "issues": []
+  },
+  {
+   "id": "com06996-x-1-1080-laboratorio-chi-chiu-informatica-1",
+   "code": null,
+   "ref": "COM06996",
+   "name": "Informática e Sociedade",
+   "turma": null,
+   "day": 1,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "B16"
+   },
+   "extra": [
+    "SI1 -",
+    "Profª Larice"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
   },
   {
    "id": "com06996-x-1-1080-predio-central-sala-07",
@@ -220,6 +297,37 @@
    "extra": [
     "SI1 -",
     "Profª Larice"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com10131-x-1-1080-laboratorio-chi-chiu-informatica-3",
+   "code": null,
+   "ref": "COM10131",
+   "name": "Otimização Linear",
+   "turma": null,
+   "day": 1,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
+    "cell": "B16"
+   },
+   "extra": [
+    "SI1 -",
+    "Prof. Geraldo"
    ],
    "issues": [
     {
@@ -260,6 +368,37 @@
    ]
   },
   {
+   "id": "com10606-x-1-1200-laboratorio-chi-chiu-informatica-3",
+   "code": null,
+   "ref": "COM10606",
+   "name": "Comércio Eletrônico",
+   "turma": null,
+   "day": 1,
+   "start": "20:00",
+   "end": "22:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
+    "cell": "B18"
+   },
+   "extra": [
+    "SI1 -",
+    "Prof. Giuliano"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
    "id": "eng06849-CC1-2-600-predio-central-maracana",
    "code": "ENG06849",
    "ref": "ENG06849",
@@ -277,6 +416,29 @@
    "source": {
     "id": "predio-central",
     "sheet": "\"Maracanã\"",
+    "cell": "C8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10392-CC1-2-600-laboratorio-chi-chiu-informatica-1",
+   "code": "COM10392",
+   "ref": "COM10392",
+   "name": "Linguagens de Programação",
+   "turma": "CC1",
+   "day": 2,
+   "start": "10:00",
+   "end": "12:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
     "cell": "C8"
    },
    "extra": [],
@@ -301,6 +463,57 @@
     "id": "predio-central",
     "sheet": "Sala 04",
     "cell": "C8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10078-CC1-2-840-laboratorio-chi-chiu-informatica-1",
+   "code": "COM10078",
+   "ref": "COM10078",
+   "name": "Estrutura de Dados II",
+   "turma": "CC1",
+   "day": 2,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "C12"
+   },
+   "extra": [],
+   "issues": [
+    {
+     "kind": "nome-diferente",
+     "text": "A planilha chama esta disciplina de \"Estruturas de Dados II\"; o currículo usa \"Estrutura de Dados II\"."
+    }
+   ]
+  },
+  {
+   "id": "com10394-CC1-2-840-laboratorio-chi-chiu-informatica-3",
+   "code": "COM10394",
+   "ref": "COM10394",
+   "name": "Redes de Computadores",
+   "turma": "CC1",
+   "day": 2,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
+    "cell": "C12"
    },
    "extra": [],
    "issues": []
@@ -352,6 +565,29 @@
    "issues": []
   },
   {
+   "id": "com10733-CC1-2-960-laboratorio-chi-chiu-informatica-3",
+   "code": "COM10733",
+   "ref": "COM10733",
+   "name": "Gerência de Projeto de Software",
+   "turma": "CC1",
+   "day": 2,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
+    "cell": "C14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
    "id": "com06850-CC1-2-960-predio-central-sala-04",
    "code": "COM06850",
    "ref": "COM06850",
@@ -369,6 +605,29 @@
    "source": {
     "id": "predio-central",
     "sheet": "Sala 04",
+    "cell": "C14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10393-CC1-2-960-laboratorio-chi-chiu-informatica-1",
+   "code": "COM10393",
+   "ref": "COM10393",
+   "name": "Métodos de Otimização",
+   "turma": "CC1",
+   "day": 2,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
     "cell": "C14"
    },
    "extra": [],
@@ -406,6 +665,68 @@
    ]
   },
   {
+   "id": "com06992-x-2-1080-laboratorio-chi-chiu-informatica-1",
+   "code": null,
+   "ref": "COM06992",
+   "name": "Estruturas de Dados I",
+   "turma": null,
+   "day": 2,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "C16"
+   },
+   "extra": [
+    "SI12-",
+    "prof. Marcelo"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI12, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com06992-x-2-1080-laboratorio-chi-chiu-laboratorio",
+   "code": null,
+   "ref": "COM06992",
+   "name": "Estruturas de Dados I",
+   "turma": null,
+   "day": 2,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Laboratório"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 2",
+    "cell": "C16"
+   },
+   "extra": [
+    "SI2 -",
+    "prof. Alexandre"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI2, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
    "id": "com06992-x-2-1080-predio-central-sala-07",
    "code": "COM06992",
    "ref": "COM06992",
@@ -426,6 +747,37 @@
     "cell": "C16"
    },
    "extra": [],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com11007-x-2-1080-laboratorio-chi-chiu-informatica-3",
+   "code": null,
+   "ref": "COM11007",
+   "name": "Segurança e Auditoria de Sistemas",
+   "turma": null,
+   "day": 2,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
+    "cell": "C16"
+   },
+   "extra": [
+    "SI1 -",
+    "Profª Simone"
+   ],
    "issues": [
     {
      "kind": "outro-curso",
@@ -487,6 +839,29 @@
    "issues": []
   },
   {
+   "id": "com06842-CC1-3-600-laboratorio-chi-chiu-informatica-1",
+   "code": "COM06842",
+   "ref": "COM06842",
+   "name": "Programação I",
+   "turma": "CC1",
+   "day": 3,
+   "start": "10:00",
+   "end": "12:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "D8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
    "id": "mpa06839-CC1-3-840-predio-central-sala-04",
    "code": "MPA06839",
    "ref": "MPA06839",
@@ -508,6 +883,34 @@
    },
    "extra": [],
    "issues": []
+  },
+  {
+   "id": "com10078-CC1-3-840-laboratorio-chi-chiu-informatica-1",
+   "code": "COM10078",
+   "ref": "COM10078",
+   "name": "Estrutura de Dados II",
+   "turma": "CC1",
+   "day": 3,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "D12"
+   },
+   "extra": [],
+   "issues": [
+    {
+     "kind": "nome-diferente",
+     "text": "A planilha chama esta disciplina de \"Estruturas de Dados II\"; o currículo usa \"Estrutura de Dados II\"."
+    }
+   ]
   },
   {
    "id": "com10792-CC1-3-840-predio-central-sala-09",
@@ -533,6 +936,34 @@
    "issues": []
   },
   {
+   "id": "optativa-pln-CC1-3-840-laboratorio-chi-chiu-informatica-3",
+   "code": null,
+   "ref": null,
+   "name": "Optativa PLN",
+   "turma": "CC1",
+   "day": 3,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "revisar",
+   "via": "turma",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
+    "cell": "D12"
+   },
+   "extra": [],
+   "issues": [
+    {
+     "kind": "fora-do-curriculo",
+     "text": "A planilha indica a turma CC1 (Ciência da Computação), mas esta disciplina não consta no currículo. Pode ser uma optativa nova; confirme com a coordenação."
+    }
+   ]
+  },
+  {
    "id": "com06851-CC1-3-960-predio-central-maracana",
    "code": "COM06851",
    "ref": "COM06851",
@@ -550,6 +981,29 @@
    "source": {
     "id": "predio-central",
     "sheet": "\"Maracanã\"",
+    "cell": "D14"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10081-CC1-3-960-laboratorio-chi-chiu-informatica-1",
+   "code": "COM10081",
+   "ref": "COM10081",
+   "name": "Metodologia de Pesquisa em Informática",
+   "turma": "CC1",
+   "day": 3,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
     "cell": "D14"
    },
    "extra": [],
@@ -633,6 +1087,37 @@
    ]
   },
   {
+   "id": "com10606-x-3-1200-laboratorio-chi-chiu-laboratorio",
+   "code": null,
+   "ref": "COM10606",
+   "name": "Comércio Eletrônico",
+   "turma": null,
+   "day": 3,
+   "start": "20:00",
+   "end": "22:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Laboratório"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 2",
+    "cell": "D18"
+   },
+   "extra": [
+    "SI1 -",
+    "Prof. Giuliano"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
    "id": "com10607-CC1-3-1200-ciclo-basico-sala-06",
    "code": null,
    "ref": "COM10607",
@@ -659,6 +1144,68 @@
     {
      "kind": "sem-codigo-turma",
      "text": "A planilha não traz o código; a disciplina foi identificada pelo nome e pela turma CC1."
+    }
+   ]
+  },
+  {
+   "id": "com06842-x-3-1200-laboratorio-chi-chiu-informatica-1",
+   "code": null,
+   "ref": "COM06842",
+   "name": "Programação I",
+   "turma": null,
+   "day": 3,
+   "start": "20:00",
+   "end": "22:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "D18"
+   },
+   "extra": [
+    "SI1 -",
+    "prof. Edmar"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com06842-x-3-1200-laboratorio-chi-chiu-informatica-3",
+   "code": null,
+   "ref": "COM06842",
+   "name": "Programação I",
+   "turma": null,
+   "day": 3,
+   "start": "20:00",
+   "end": "22:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
+    "cell": "D18"
+   },
+   "extra": [
+    "SI2 -",
+    "prof. Helder"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI2, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
     }
    ]
   },
@@ -703,6 +1250,29 @@
    "source": {
     "id": "predio-central",
     "sheet": "\"Maracanã\"",
+    "cell": "E8"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10392-CC1-4-600-laboratorio-chi-chiu-informatica-1",
+   "code": "COM10392",
+   "ref": "COM10392",
+   "name": "Linguagens de Programação",
+   "turma": "CC1",
+   "day": 4,
+   "start": "10:00",
+   "end": "12:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
     "cell": "E8"
    },
    "extra": [],
@@ -755,6 +1325,29 @@
    "issues": []
   },
   {
+   "id": "com10275-CC1-4-840-laboratorio-chi-chiu-informatica-3",
+   "code": "COM10275",
+   "ref": "COM10275",
+   "name": "Engenharia de Requisitos de Software",
+   "turma": "CC1",
+   "day": 4,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
+    "cell": "E12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
    "id": "dqf10079-CC1-4-840-predio-central-sala-04",
    "code": "DQF10079",
    "ref": "DQF10079",
@@ -796,6 +1389,80 @@
     "id": "predio-central",
     "sheet": "Sala 09",
     "cell": "E12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10792-x-4-840-laboratorio-chi-chiu-laboratorio",
+   "code": null,
+   "ref": "COM10792",
+   "name": "Inteligência Artificial",
+   "turma": null,
+   "day": 4,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Laboratório"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 2",
+    "cell": "E12"
+   },
+   "extra": [],
+   "issues": [
+    {
+     "kind": "sem-codigo",
+     "text": "A planilha não traz o código; a disciplina foi identificada só pelo nome. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com06850-CC1-4-840-laboratorio-chi-chiu-informatica-1",
+   "code": "COM06850",
+   "ref": "COM06850",
+   "name": "Introdução à Ciência da Computação",
+   "turma": "CC1",
+   "day": 4,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "E12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10733-CC1-4-960-laboratorio-chi-chiu-informatica-1",
+   "code": "COM10733",
+   "ref": "COM10733",
+   "name": "Gerência de Projeto de Software",
+   "turma": "CC1",
+   "day": 4,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "E14"
    },
    "extra": [],
    "issues": []
@@ -850,6 +1517,34 @@
    },
    "extra": [],
    "issues": []
+  },
+  {
+   "id": "com11081-x-4-960-laboratorio-chi-chiu-laboratorio",
+   "code": "COM11081",
+   "ref": "COM11081",
+   "name": "Tópicos Especiais em Informática II",
+   "turma": null,
+   "day": 4,
+   "start": "16:00",
+   "end": "18:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Laboratório"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 2",
+    "cell": "E14"
+   },
+   "extra": [],
+   "issues": [
+    {
+     "kind": "nome-diferente",
+     "text": "A planilha chama esta disciplina de \"Tópicos Especiais em Informática II (PLN\"; o currículo usa \"Tópicos Especiais em Informática II\"."
+    }
+   ]
   },
   {
    "id": "mpa06840-CC1-4-960-predio-central-sala-09",
@@ -933,6 +1628,68 @@
    ]
   },
   {
+   "id": "com06992-x-4-1080-laboratorio-chi-chiu-informatica-1",
+   "code": null,
+   "ref": "COM06992",
+   "name": "Estruturas de Dados I",
+   "turma": null,
+   "day": 4,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "E16"
+   },
+   "extra": [
+    "SI1 -",
+    "prof. Alexandre"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com06992-x-4-1080-laboratorio-chi-chiu-laboratorio",
+   "code": null,
+   "ref": "COM06992",
+   "name": "Estruturas de Dados I",
+   "turma": null,
+   "day": 4,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Laboratório"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 2",
+    "cell": "E16"
+   },
+   "extra": [
+    "SI2 -",
+    "prof. Alexandre"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI2, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
    "id": "com10076-CC1-5-480-predio-central-sala-04",
    "code": "COM10076",
    "ref": "COM10076",
@@ -996,6 +1753,29 @@
    "source": {
     "id": "predio-central",
     "sheet": "Sala 06",
+    "cell": "F12"
+   },
+   "extra": [],
+   "issues": []
+  },
+  {
+   "id": "com10394-CC1-5-840-laboratorio-chi-chiu-informatica-1",
+   "code": "COM10394",
+   "ref": "COM10394",
+   "name": "Redes de Computadores",
+   "turma": "CC1",
+   "day": 5,
+   "start": "14:00",
+   "end": "16:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "curso",
+   "via": "codigo",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
     "cell": "F12"
    },
    "extra": [],
@@ -1071,6 +1851,99 @@
    "issues": []
   },
   {
+   "id": "com06842-x-5-1080-laboratorio-chi-chiu-informatica-1",
+   "code": null,
+   "ref": "COM06842",
+   "name": "Programação I",
+   "turma": null,
+   "day": 5,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 1"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 1",
+    "cell": "F16"
+   },
+   "extra": [
+    "SI1 -",
+    "prof. Edmar"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com06842-x-5-1080-laboratorio-chi-chiu-informatica-3",
+   "code": null,
+   "ref": "COM06842",
+   "name": "Programação I",
+   "turma": null,
+   "day": 5,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
+    "cell": "F16"
+   },
+   "extra": [
+    "SI2 -",
+    "prof. Helder"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI2, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com11007-x-5-1080-laboratorio-chi-chiu-laboratorio",
+   "code": null,
+   "ref": "COM11007",
+   "name": "Segurança e Auditoria de Sistemas",
+   "turma": null,
+   "day": 5,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Laboratório"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 2",
+    "cell": "F16"
+   },
+   "extra": [
+    "SI1 -",
+    "Profª Simone"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
    "id": "com10132-x-5-1080-predio-central-sala-07",
    "code": null,
    "ref": "COM10132",
@@ -1097,6 +1970,37 @@
     {
      "kind": "sem-codigo",
      "text": "A planilha não traz o código; a disciplina foi identificada só pelo nome. Confirme com a coordenação."
+    }
+   ]
+  },
+  {
+   "id": "com10616-x-5-1200-laboratorio-chi-chiu-informatica-3",
+   "code": null,
+   "ref": "COM10616",
+   "name": "Sistemas Distribuídos",
+   "turma": null,
+   "day": 5,
+   "start": "20:00",
+   "end": "22:00",
+   "local": {
+    "group": "Laboratório Chi-Chiu",
+    "room": "Informática 3"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "chi-chiu",
+    "sheet": "Informática 3",
+    "cell": "F18"
+   },
+   "extra": [
+    "SI1 -",
+    "Prof. Helder"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
     }
    ]
   }
