@@ -1,9 +1,9 @@
 {
  "schemaVersion": 1,
  "course": "Ciência da Computação",
- "generatedAt": "2026-11-08T15:50:34.348Z",
+ "generatedAt": "2026-11-09T19:35:45.911Z",
  "lastAttempt": {
-  "at": "2026-11-08T15:50:34.348Z",
+  "at": "2026-11-09T19:35:45.911Z",
   "ok": true,
   "message": null
  },
@@ -14,7 +14,7 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQziQtbnCTvmYk2F9J9tw6W0qVvYceMi3IsE-pXRdF6Cc8oIyxsCW4SZbho_AJDj538tcqaG4s8XFEn/pubhtml",
    "fileName": null,
-   "fetchedAt": "2026-11-08T15:50:34.348Z",
+   "fetchedAt": "2026-11-09T19:35:45.911Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
@@ -32,7 +32,7 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/salas",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSJWpCXgWLk-M_rTwUDKNjaky40wExieiDrBlMJoA_tU_XOGK-ngWWzJtBnkSCpwCFDY4Z46GwdqCum/pubhtml",
    "fileName": null,
-   "fetchedAt": "2026-11-08T15:50:34.348Z",
+   "fetchedAt": "2026-11-09T19:35:45.911Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
@@ -40,8 +40,8 @@
    "sheets": 12,
    "lidas": 659,
    "doCurso": 2,
-   "aRevisar": 4,
-   "descartadas": 647,
+   "aRevisar": 5,
+   "descartadas": 645,
    "warnings": []
   },
   {
@@ -50,7 +50,7 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/laboratorios",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRY5g2caIXfP5E9Cx7C1Q7doLQ87x3IzmW6m2HEb9HfY-BPK4sTQ4T86zcxDyd4OV1T05kIAOEsltyb/pubhtml",
    "fileName": "pubhtml",
-   "fetchedAt": "2026-11-08T15:50:34.348Z",
+   "fetchedAt": "2026-11-09T19:35:45.911Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
@@ -68,7 +68,7 @@
    "pageUrl": "https://graduacao.alegre.ufes.br/horario/laboratorios",
    "fileUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTTGd9f2nP80QJfujahWIja0ZeujYFyZdI0xey93NnIz-gOmH2YmeVRFvV-L_QTD5aB2tssy86IS00J/pubhtml",
    "fileName": "pubhtml",
-   "fetchedAt": "2026-11-08T15:50:34.348Z",
+   "fetchedAt": "2026-11-09T19:35:45.911Z",
    "fileLastModified": null,
    "sheetUpdatedText": null,
    "status": "ok",
@@ -1054,6 +1054,37 @@
    },
    "extra": [],
    "issues": []
+  },
+  {
+   "id": "com10015-x-3-1080-ciclo-basico-sala-03",
+   "code": null,
+   "ref": "COM10015",
+   "name": "Engenharia de Software",
+   "turma": null,
+   "day": 3,
+   "start": "18:00",
+   "end": "20:00",
+   "local": {
+    "group": "Ciclo Básico",
+    "room": "Sala 03"
+   },
+   "status": "revisar",
+   "via": "nome",
+   "source": {
+    "id": "ciclo-basico",
+    "sheet": "Sala 03",
+    "cell": "D16"
+   },
+   "extra": [
+    "SI1 -",
+    "Prof. Bruno"
+   ],
+   "issues": [
+    {
+     "kind": "outro-curso",
+     "text": "A planilha indica a turma SI1, que não é de Ciência da Computação (CC). O nome ou código coincide com uma disciplina do currículo, mas é provável que a aula seja de outro curso. Confirme com a coordenação."
+    }
+   ]
   },
   {
    "id": "com10616-x-3-1080-predio-central-sala-07",
